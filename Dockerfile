@@ -9,9 +9,6 @@ COPY ./init/ /docker-entrypoint-initdb.d/
 
 # POSTGRES_DB, POSTGRES_USER, POSTGRES_PASSWORD — Cloud Run / Compose.
 # Optional: INIT_SQL_DIR — directory of *.sql (e.g. Cloud Storage volume mount).
-ENV POSTGRES_DB=blog_db \
-    POSTGRES_USER=blog_user \
-    POSTGRES_PASSWORD=blog_pass
 
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint-init.sh"]
 
